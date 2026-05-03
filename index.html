@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Task Tracker</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
 
+<h2>📚 Student Task Tracker</h2>
+
+<input type="text" id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<script>
+function addTask() {
+  var input = document.getElementById("taskInput");
+  if(input.value === "") return;
+  
+  var li = document.createElement("li");
+  li.innerText = input.value;
+  
+  document.getElementById("taskList").appendChild(li);
+  input.value = "";
+}
+</script>
+
+</body>
+</html>
